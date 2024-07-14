@@ -6,8 +6,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+        exit;
+    }
+
+    // Check if fields are empty
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        echo "All fields are required";
+        exit;
+    }
+
     // Specify your receiving email address here
-    $receiving_email_address = 'as5553@rit.edu';
+    $receiving_email_address = 'abhishekshah3010@gmail.com';
 
     // Construct the email headers
     $headers = "From: $name <$email>\r\n";
@@ -24,4 +36,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Invalid request.";
 }
-?>
