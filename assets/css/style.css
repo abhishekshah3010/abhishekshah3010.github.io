@@ -33,6 +33,17 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+@media (min-width: 992px) {
+  #about {
+    padding-bottom: 20px;
+  }
+
+  #facts {
+    padding-top: 20px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
