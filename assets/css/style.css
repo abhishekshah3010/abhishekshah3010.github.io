@@ -3198,6 +3198,11 @@ body.mode-dark .terminal-card {
 
   .mobile-nav-active #header {
     left: 0;
+    z-index: 10001;
+  }
+
+  #header {
+    z-index: 10000;
   }
 
   #header .profile h1 a,
@@ -3213,6 +3218,40 @@ body.mode-dark .terminal-card {
     border: 3px solid #121212;
     border-radius: 8px;
     box-shadow: 4px 4px 0 #121212;
+  }
+
+  #header {
+    left: -320px;
+    transition: left 0.25s ease;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+
+  body.mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-overly {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+
+  .mobile-nav-toggle {
+    z-index: 10002;
+  }
+
+  body.mobile-nav-active .mobile-nav-overly {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
@@ -4992,6 +5031,26 @@ body::after {
 .mobile-nav-toggle {
   position: relative;
   z-index: 1;
+}
+
+#header {
+  position: fixed !important;
+  z-index: 10000 !important;
+}
+
+.mobile-nav-toggle {
+  position: fixed !important;
+  z-index: 10002 !important;
+  top: 15px !important;
+  right: 15px !important;
+}
+
+.mobile-nav-active #header {
+  z-index: 10001 !important;
+}
+
+body.mobile-nav-active .mobile-nav-overly {
+  z-index: 10000 !important;
 }
 
 #main {

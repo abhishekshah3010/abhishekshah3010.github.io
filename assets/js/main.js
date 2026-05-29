@@ -101,10 +101,24 @@
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
+    const body = select('body')
+    body.classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
+
+  const mobileNavOverlay = select('.mobile-nav-overly')
+  const mobileNavToggle = select('.mobile-nav-toggle')
+  if (mobileNavOverlay) {
+    mobileNavOverlay.addEventListener('click', () => {
+      const body = select('body')
+      if (body.classList.contains('mobile-nav-active')) {
+        body.classList.remove('mobile-nav-active')
+        mobileNavToggle.classList.add('bi-list')
+        mobileNavToggle.classList.remove('bi-x')
+      }
+    })
+  }
 
   /**
    * Scrool with ofset on links with a class name .scrollto
