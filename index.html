@@ -14,12 +14,11 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -48,13 +47,9 @@
       <div class="d-flex flex-column">
         <div class="profile">
           <br />
-          <img
-            src="assets/img/profile-img.jpeg"
-            alt=""
-            class="img-fluid rounded-circle"
-            style="width: 175px; height: 175px"
-          />
+          <div class="profile-mark" aria-hidden="true">AS</div>
           <h1 class="text-light"><a href="index.html">Abhishek Shah</a></h1>
+          <p class="profile-kicker">Software Engineer</p>
           <div class="social-links mt-3 text-center">
             <a
               href="https://medium.com/@abhishekshah3010"
@@ -102,10 +97,19 @@
                 ><i class="bi-bar-chart"></i> <span>Skills</span></a
               >
             </li>
-            <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li> -->
+            <li>
+              <a href="#projects" class="nav-link scrollto"
+                ><i class="bi-braces"></i> <span>Projects</span></a
+              >
+            </li>
             <li>
               <a href="#services" class="nav-link scrollto"
                 ><i class="bi-keyboard"></i> <span>Expertise</span></a
+              >
+            </li>
+            <li>
+              <a href="#blog" class="nav-link scrollto"
+                ><i class="bi bi-journal-text"></i> <span>Blog</span></a
               >
             </li>
             <li>
@@ -121,138 +125,182 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section
-      id="hero"
-      class="d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="hero-container" data-aos="fade-in">
-        <h1>Abhishek Shah</h1>
-        <p>
-          <span
-            class="typed"
-            data-typed-items="Associate SWE @ Goldman Sachs, Backend | Data | Infrastructure, Java | Python | SQL | Cloud"
-          ></span>
-        </p>
-        <br />
-        <a href="Abhishek_Shah_Resume.pdf" target="_blank" class="styled-button"
-          >Resume</a
-        >
-        <!-- <a href="Abhishek_Shah_resume.pdf" target="_blank" class="styled-button">Resume</a> -->
+    <section id="hero" class="hero-terminal">
+      <div class="hero-shell container">
+        <div class="hero-panel" data-aos="fade-up">
+          <div class="hero-badge">portfolio</div>
+          <div class="hero-copy">
+            <p class="hero-prompt">Software Engineer</p>
+            <h1>Abhishek Shah</h1>
+            <p class="hero-tagline">
+              I build backend systems, data workflows, and AI-powered products
+              that scale cleanly and feel sharp.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="cmd-button accent" href="#projects"
+              ><i class="bi bi-stars"></i> View Projects</a
+            >
+            <a
+              class="cmd-button"
+              href="Abhishek_Shah_Resume.pdf"
+              target="_blank"
+              ><i class="bi bi-file-earmark-arrow-down"></i> Resume</a
+            >
+          </div>
+
+        </div>
+
+        <aside class="hero-hud" data-aos="fade-up" data-aos-delay="150">
+          <div class="hero-portrait">
+            <img src="assets/img/profile-img.jpeg" alt="Abhishek Shah" />
+            <div>
+              <span>Now shipping</span>
+              <strong>Backend systems, AI workflows, and crisp product surfaces.</strong>
+            </div>
+          </div>
+          <div class="hud-top">
+            <div class="hud-pill">available signal</div>
+            <div class="hud-pill hud-pill-alt">high</div>
+          </div>
+          <div class="hud-card">
+            <div class="hud-line">
+              <strong>Role:</strong><span>Software Engineer</span>
+            </div>
+            <div class="hud-line">
+              <strong>Focus:</strong><span>Backend, AI, System Design</span>
+            </div>
+            <div class="hud-line">
+              <strong>Location:</strong><span>New York City, United States</span>
+            </div>
+            <div class="hud-line">
+              <strong>Open to:</strong><span>Opportunities</span>
+            </div>
+          </div>
+
+          <div class="hud-commands">
+            <a href="#about">About <i class="bi bi-arrow-right"></i></a>
+            <a href="#resume">Experience <i class="bi bi-arrow-right"></i></a>
+            <a href="#blog">Blog <i class="bi bi-arrow-right"></i></a>
+            <a href="#contact">Contact <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </aside>
       </div>
+
+      <div class="hero-shadow"></div>
+      <div class="hero-glow"></div>
+      <div class="scanlines" aria-hidden="true"></div>
     </section>
     <!-- End Hero -->
 
     <main id="main">
       <!-- ======= About Section ======= -->
-      <section id="about" class="about">
+      <section id="about" class="about section-bg">
         <div class="container">
           <div class="section-title">
             <h2>About</h2>
-
-            <p style="text-align: justify; margin-bottom: 12px">
-              I am a <strong>Software Engineer</strong> working at the
-              intersection of
-              <strong>finance, data, and backend infrastructure</strong>. At
-              <strong>Goldman Sachs</strong>, I build and enhance large scale
-              reporting and subledger platforms that support critical financial
-              workflows across multiple teams.
-            </p>
-
-            <p style="text-align: justify; margin-bottom: 12px">
-              I work across
-              <strong>Java, Python, SQL, and cloud technologies</strong>, and I
-              enjoy solving problems involving
-              <strong>scale, data integrity, and operational reliability</strong
-              >. From workflow automation to platform resiliency and security
-              improvements, I build software that is simple to operate and
-              dependable under real world pressure.
-            </p>
-
-            <p style="margin-bottom: 0">
-              I value <strong>clean architecture</strong>,
-              <strong>strong ownership</strong>, and
-              <strong>cross functional collaboration</strong>, and I’m motivated
-              by building systems engineers and businesses can trust.
+            <p>
+              A systems engineer who blends backend precision with product
+              energy, building systems that feel fast, clear, and human.
             </p>
           </div>
 
-          <!-- <a href="Abhishek_Shah_coverletter_portfolio.pdf" target="_blank" class="styled-button">Cover Letter</a> -->
+          <div class="about-grid">
+            <div class="about-card" data-aos="fade-up">
+              <div class="about-card-header">system summary</div>
+              <div class="about-card-body">
+                <p>
+                  I am a <strong>Software Engineer</strong> working at the
+                  intersection of
+                  <strong>finance, data, and backend infrastructure</strong>. At
+                  <strong>Goldman Sachs</strong>, I build and enhance
+                  large-scale reporting and subledger platforms that support
+                  critical financial workflows across teams.
+                </p>
+                <p>
+                  I work across
+                  <strong>Java, Python, SQL, and cloud technologies</strong> and
+                  enjoy solving problems involving
+                  <strong
+                    >scale, data integrity, and operational reliability</strong
+                  >.
+                </p>
+                <p>
+                  I value <strong>clean architecture</strong>,
+                  <strong>strong ownership</strong>, and
+                  <strong>cross-functional collaboration</strong>, and I’m
+                  motivated by building systems engineers and businesses can
+                  trust.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-panel" data-aos="fade-up" data-aos-delay="100">
+              <div class="about-panel-item">
+                <span class="label">Primary Stack</span>
+                <strong>Java, Python, SQL, AWS, Docker, Kubernetes</strong>
+              </div>
+              <div class="about-panel-item">
+                <span class="label">Work style</span>
+                <strong>Data-first, reliability-focused, product-aware</strong>
+              </div>
+              <div class="about-panel-item">
+                <span class="label">Signature</span>
+                <strong>Scalable systems with crisp user trust</strong>
+              </div>
+              <div class="about-panel-item">
+                <span class="label">Mode</span>
+                <strong>Build, optimize, ship, repeat</strong>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- End About Section -->
 
-      <section id="facts" class="facts">
+      <section id="facts" class="facts section-bg">
         <div class="container">
           <div class="section-title">
-            <h2>Areas of Interest</h2>
+            <h2>Core Modules</h2>
+            <p>
+              Tech modules and systems I bring online with precision, speed, and
+              a little bit of neon flair.
+            </p>
           </div>
 
-          <div class="row no-gutters">
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-            >
-              <div class="count-box">
-                <i class="bi-keyboard"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="232"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><strong>Backend Systems</strong></p>
-              </div>
+          <div class="fact-grid">
+            <div class="fact-card" data-aos="fade-up">
+              <div class="fact-icon"><i class="bi-keyboard"></i></div>
+              <h3>Backend Systems</h3>
+              <p>
+                Architected stable services and APIs for mission-critical
+                workflows.
+              </p>
             </div>
-
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="count-box">
-                <i class="bi-bar-chart"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="521"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><strong>Data Platforms & Pipelines</strong></p>
-              </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="fact-icon"><i class="bi-bar-chart"></i></div>
+              <h3>Data Platforms</h3>
+              <p>
+                Built pipelines and reporting systems that scale with high
+                integrity.
+              </p>
             </div>
-
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="count-box">
-                <i class="bi-terminal"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="1453"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><strong>Distributed Systems</strong></p>
-              </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="fact-icon"><i class="bi-terminal"></i></div>
+              <h3>Distributed Systems</h3>
+              <p>
+                Designed resilient services for high volume and multi-team
+                delivery.
+              </p>
             </div>
-
-            <div
-              class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="count-box">
-                <i class="bi-infinity"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="32"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p><strong>Reliability & Infrastructure</strong></p>
-              </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="fact-icon"><i class="bi-infinity"></i></div>
+              <h3>Reliability</h3>
+              <p>
+                Improved uptime, data safety, and operational confidence under
+                pressure.
+              </p>
             </div>
           </div>
         </div>
@@ -284,12 +332,6 @@
                     <li style="text-align: justify">MEDI 610: Introduction to Scripting</li>
                   </ul> -->
 
-                  <li style="text-align: justify">
-                    <strong>Relevant Courses:</strong> Algorithms, Machine
-                    Learning, Big Data,
-                    <br />
-                    Distributed Systems, Cloud Computing
-                  </li>
                 </ul>
               </div>
               <div class="resume-item">
@@ -302,12 +344,6 @@
                 <h5>Jun 2016 - Jun 2020</h5>
                 <ul>
                   <li style="text-align: justify"><b>CGPA:</b> 9.11 / 10</li>
-                  <li style="text-align: justify">
-                    <strong>Relevant Courses:</strong> Operating Systems,
-                    Artificial Intelligence,
-                    <br />
-                    Computer Architecture, Computer Networks, Databases
-                  </li>
                 </ul>
               </div>
             </div>
@@ -426,218 +462,66 @@
         </div>
       </section>
       <!-- End Resume Section -->
-
       <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-bg">
+      <section id="skills" class="skills">
         <div class="container">
           <div class="section-title">
             <h2>Skills</h2>
+            <p>Capabilities and comfort zones, shown as vibrant status bars.</p>
           </div>
 
-          <div class="row skills-content" data-aos="fade-up">
-            <!-- Languages -->
-            <div class="col-lg-6">
-              <h4>Languages</h4>
-
-              <div class="progress">
-                <span class="skill">Java <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Python <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">SQL <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="95"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JavaScript <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">C++ <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                  ></div>
-                </div>
+          <div class="skills-grid skills-board">
+            <div class="skill-card skill-feature" data-aos="fade-up">
+              <span class="skill-kicker">Core Stack</span>
+              <h4>Backend systems that stay fast under pressure.</h4>
+              <p>
+                I work closest to the layers where reliability, data integrity,
+                and clean service contracts matter.
+              </p>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="skill-kicker">Languages</span>
+              <div class="skill-chip-grid">
+                <span>Java</span>
+                <span>Python</span>
+                <span>SQL</span>
+                <span>JavaScript</span>
+                <span>Shell</span>
+                <span>C++</span>
               </div>
             </div>
-
-            <!-- Databases -->
-            <div class="col-lg-6">
-              <h4>Databases</h4>
-
-              <div class="progress">
-                <span class="skill">PostgreSQL <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">MySQL <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">MongoDB <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">DynamoDB <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="skill-kicker">Data Layer</span>
+              <div class="skill-chip-grid">
+                <span>PostgreSQL</span>
+                <span>MySQL</span>
+                <span>MongoDB</span>
+                <span>DynamoDB</span>
+                <span>Reporting</span>
               </div>
             </div>
-          </div>
-
-          <!-- Core Engineering -->
-          <div class="row skills-content mt-4" data-aos="fade-up">
-            <div class="col-lg-6">
-              <h4>Core Engineering</h4>
-
-              <div class="progress">
-                <span class="skill"
-                  >REST APIs & Microservices <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >Backend Architecture <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >Workflow Automation <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                  ></div>
-                </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <span class="skill-kicker">Engineering</span>
+              <div class="skill-chip-grid">
+                <span>REST APIs</span>
+                <span>Backend Architecture</span>
+                <span>Workflow Automation</span>
+                <span>Reliability</span>
+                <span>System Design</span>
+                <span>FastAPI</span>
+                <span>Node.js</span>
+                <span>React.js</span>
+                <span>Selenium</span>
               </div>
             </div>
-
-            <!-- Cloud & Tooling -->
-            <div class="col-lg-6">
-              <h4>Cloud & Tooling</h4>
-
-              <div class="progress">
-                <span class="skill">AWS <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Docker <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Kubernetes <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="70"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >CI/CD, Maven, Gradle, JUnit <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                  ></div>
-                </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+              <span class="skill-kicker">Cloud & Tooling</span>
+              <div class="skill-chip-grid">
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>CI/CD</span>
+                <span>Git</span>
               </div>
             </div>
           </div>
@@ -646,122 +530,90 @@
       <!-- End Skills Section -->
 
       <!-- ======= Projects Section ======= -->
-      <!-- <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
+      <section id="projects" class="portfolio section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projects</h2>
+            <p>
+              Selected systems, workflows, and product engineering showcases.
+            </p>
+          </div>
 
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-1.jpg"
+                  class="img-fluid"
+                  alt="Podcast Summarizer"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-1.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Podcast Summarizer"
+                    ><i class="bx bx-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bx bx-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="project-chip">Podcast Summarizer</div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-2.jpg"
+                  class="img-fluid"
+                  alt="Web 3 Dashboard"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-2.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="Web 3 Dashboard"
+                    ><i class="bx bx-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bx bx-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="project-chip">Web 3 Dashboard</div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-3.jpg"
+                  class="img-fluid"
+                  alt="AI Assistant App"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-3.jpg"
+                    data-gallery="portfolioGallery"
+                    class="portfolio-lightbox"
+                    title="AI Assistant App"
+                    ><i class="bx bx-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bx bx-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="project-chip">AI Assistant App</div>
+            </div>
           </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Podcast Summarizer"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div> -->
-
-      <!-- </div>
-
-      </div>
-    </section>
-    End Portfolio Section -->
+      </section>
+      <!-- End Projects Section -->
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services">
@@ -771,84 +623,86 @@
             <!-- <p>I have a strong grasp of various technologies and methodologies, allowing me to tackle complex challenges effectively. My problem-solving skills enable me to find innovative solutions and deliver high-quality results. I am dedicated to staying up-to-date with industry trends to provide the best possible solutions to clients.</p> -->
           </div>
 
-          <div class="row">
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Technical Problem Scoping</a></h4>
-              <p class="description">
+          <div class="service-grid">
+            <div class="service-card" data-aos="fade-up">
+              <div class="service-icon">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <h4>Problem Scoping</h4>
+              <p>
                 Translating business and financial requirements into clear,
-                actionable technical solutions and system designs
+                actionable technical solutions.
               </p>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon"><i class="bi-pen"></i></div>
-              <h4 class="title"><a href="">System & API Design</a></h4>
-              <p class="description">
-                Designing scalable backend services and APIs with a focus on
-                reliability, performance, and long term maintainability
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon"><i class="bi bi-pen"></i></div>
+              <h4>API Design</h4>
+              <p>
+                Designing reliable backend services and contracts for fast, safe
+                integration.
               </p>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon"><i class="bi bi-laptop"></i></div>
-              <h4 class="title"><a href="">Backend Development</a></h4>
-              <p class="description">
-                Building and maintaining high performance services and workflows
-                using Java, Python, SQL, and cloud based architectures
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon"><i class="bi bi-laptop"></i></div>
+              <h4>Backend Development</h4>
+              <p>
+                Building performant services using Java, Python, SQL and
+                cloud-native tooling.
               </p>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-              <h4 class="title"><a href="">Reliability & Testing</a></h4>
-              <p class="description">
-                Ensuring system stability through testing, monitoring, and
-                proactive issue resolution in production environments
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h4>Reliability</h4>
+              <p>
+                Ensuring stability through testing, monitoring, and proactive
+                issue resolution.
               </p>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon"><i class="bi bi-upload"></i></div>
-              <h4 class="title"><a href="">Production Deployment</a></h4>
-              <p class="description">
-                Deploying and supporting services in production with an emphasis
-                on automation, security, and operational excellence
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-icon"><i class="bi bi-upload"></i></div>
+              <h4>Deployment</h4>
+              <p>
+                Automating delivery pipelines for smooth production launches and
+                fast iteration.
               </p>
             </div>
-
-            <div
-              class="col-lg-4 col-md-6 icon-box"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="icon"><i class="bi bi-people"></i></div>
-              <h4 class="title"><a href="">Agile Collaboration</a></h4>
-              <p class="description">
-                Working closely with cross functional teams in Agile
-                environments to deliver incremental, high impact solutions
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-icon"><i class="bi bi-people"></i></div>
+              <h4>Collaboration</h4>
+              <p>
+                Working with product, data, and infra teams to deliver aligned,
+                high-impact outcomes.
               </p>
             </div>
           </div>
         </div>
       </section>
       <!-- End Services Section -->
+
+      <!-- ======= Blog Section ======= -->
+      <section id="blog" class="blog section-bg">
+        <div class="container">
+          <div class="terminal-card blog-card" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Blog</h2>
+            </div>
+            <p>
+              I share technical insights on distributed systems, backend design,
+              and AI systems. Explore my latest writing on Medium for
+              engineering stories, system patterns, and career notes.
+            </p>
+            <a
+              class="cmd-button"
+              href="https://medium.com/@abhishekshah3010"
+              target="_blank"
+              ><i class="bi bi-journal-richtext"></i> Read the Blog</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- End Blog Section -->
 
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
@@ -857,102 +711,63 @@
             <h2>Contact</h2>
           </div>
 
-          <div class="row" data-aos="fade-in">
-            <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>
-                    <a href="mailto:shahabhishek3010@gmail.com"
-                      >shahabhishek3010@gmail.com</a
-                    >
-                  </p>
+          <div class="contact-grid" data-aos="fade-in">
+            <div class="contact-card">
+              <div class="contact-card-top">Contact</div>
+              <div class="contact-info">
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:shahabhishek3010@gmail.com"
+                    >shahabhishek3010@gmail.com</a
+                  >
                 </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <a href="tel:+15853519899" style="color: inherit">
-                    <p>+1 (585) 351-9899</p>
-                  </a>
+                <div>
+                  <span>Phone</span>
+                  <a href="tel:+15853519899">+1 (585) 351-9899</a>
                 </div>
-
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>New York City Metropolitan Area, United States</p>
+                <div>
+                  <span>Location</span>
+                  <p>New York City, United States</p>
                 </div>
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1547066.3972405728!2d-74.88997191676745!3d40.770512551756646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c286d6e07696fb%3A0xca34053f4678c888!2sNew%20York%20Metropolitan%20Area!5e0!3m2!1sen!2sus!4v1720975385562!5m2!1sen!2sus"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen
-                ></iframe>
+              </div>
+              <div class="contact-actions">
+                <a class="cmd-button" href="mailto:shahabhishek3010@gmail.com"
+                  ><i class="bi bi-envelope"></i> Email Me</a
+                >
+                <a
+                  class="cmd-button accent"
+                  href="Abhishek_Shah_Resume.pdf"
+                  target="_blank"
+                  ><i class="bi bi-file-earmark-arrow-down"></i> Resume</a
+                >
               </div>
             </div>
-
-            <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
+            <div class="map-card">
+              <div class="contact-signal">
+                <span>Current Signal</span>
+                <strong>Open to backend, platform, and AI product engineering roles.</strong>
+              </div>
+              <div class="contact-board">
+                <div>
+                  <span>Response</span>
+                  <strong>Fast</strong>
+                </div>
+                <div>
+                  <span>Base</span>
+                  <strong>New York City</strong>
+                </div>
+                <div>
+                  <span>Mode</span>
+                  <strong>Build sharp systems</strong>
+                </div>
+              </div>
+              <a
+                class="contact-big-link"
+                href="https://www.linkedin.com/in/shahabhishek3010/"
+                target="_blank"
+                ><i class="bx bxl-linkedin"></i> Connect on LinkedIn</a
               >
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="email">Your Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="10"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </form>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -983,8 +798,6 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
