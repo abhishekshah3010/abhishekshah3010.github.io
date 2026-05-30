@@ -8233,6 +8233,308 @@ section {
   }
 }
 
+/* Experience Board Rebuild + Motion */
+#resume {
+  background:
+    linear-gradient(135deg, rgba(255, 216, 102, 0.28) 0 18%, transparent 18%),
+    linear-gradient(315deg, rgba(127, 232, 255, 0.3) 0 22%, transparent 22%),
+    #fffdf4 !important;
+}
+
+#resume .experience-board {
+  display: grid;
+  gap: 24px;
+}
+
+#resume .experience-lede {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding: 30px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 5px solid var(--box-ink);
+  border-radius: 8px;
+  box-shadow: 12px 12px 0 var(--box-ink);
+}
+
+#resume .experience-lede::after {
+  content: "";
+  position: absolute;
+  right: -44px;
+  top: -44px;
+  width: 150px;
+  height: 150px;
+  background: var(--box-orange);
+  border: 5px solid var(--box-ink);
+  border-radius: 50%;
+  box-shadow: 8px 8px 0 var(--box-sky);
+  animation: badgeFloat 5.5s ease-in-out infinite;
+}
+
+#resume .experience-lede > span {
+  width: fit-content;
+  padding: 9px 13px;
+  background: var(--box-lime);
+  border: 3px solid var(--box-ink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--box-ink);
+  color: var(--box-ink);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#resume .experience-lede h3 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--box-ink);
+  font-size: clamp(2rem, 1.4rem + 2vw, 4rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+#resume .experience-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#resume .experience-pills span {
+  padding: 10px 14px;
+  background: #dff6ff;
+  border: 3px solid var(--box-ink);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--box-ink);
+  color: var(--box-ink);
+  font-weight: 900;
+}
+
+#resume .experience-pills span:nth-child(2) {
+  background: #ffe3d1;
+}
+
+#resume .experience-pills span:nth-child(3) {
+  background: #f1e0ff;
+}
+
+#resume .experience-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+#resume .experience-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: 24px;
+  background: #ffffff;
+  border: 5px solid var(--box-ink);
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 var(--box-ink);
+  color: var(--box-ink);
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+#resume .experience-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 16px 16px 0 var(--box-ink);
+}
+
+#resume .experience-card--current {
+  background:
+    linear-gradient(135deg, rgba(127, 232, 255, 0.55) 0 30%, transparent 30%),
+    #ffffff;
+}
+
+#resume .experience-card:nth-child(2) {
+  background:
+    linear-gradient(135deg, rgba(239, 255, 205, 0.65) 0 28%, transparent 28%),
+    #ffffff;
+}
+
+#resume .experience-card:nth-child(3) {
+  background:
+    linear-gradient(135deg, rgba(241, 224, 255, 0.85) 0 28%, transparent 28%),
+    #ffffff;
+}
+
+#resume .experience-card-top {
+  display: block;
+  margin-bottom: 24px;
+}
+
+#resume .experience-card-top span {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 8px 12px;
+  background: var(--box-orange);
+  border: 3px solid var(--box-ink);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--box-ink);
+  color: var(--box-ink);
+  font-weight: 950;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+#resume .experience-card-top strong {
+  max-width: 54%;
+  color: var(--box-ink);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  text-align: right;
+}
+
+#resume .experience-card h4 {
+  margin: 0 0 8px;
+  color: var(--box-ink);
+  font-size: clamp(1.42rem, 1.2rem + 0.7vw, 2rem);
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+#resume .experience-card p {
+  margin: 0 0 22px;
+  color: var(--box-ink);
+  font-weight: 800;
+}
+
+#resume .experience-card ul {
+  display: grid;
+  gap: 12px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#resume .experience-card li {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 3px solid var(--box-ink);
+  border-radius: 6px;
+  color: var(--box-ink);
+  font-size: 1.02rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+#resume .experience-footer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#resume .experience-footer div {
+  padding: 22px;
+  background: #efffcd;
+  border: 5px solid var(--box-ink);
+  border-radius: 8px;
+  box-shadow: 9px 9px 0 var(--box-ink);
+}
+
+#resume .experience-footer div:nth-child(2) {
+  background: #dff6ff;
+}
+
+#resume .experience-footer span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--box-ink);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+#resume .experience-footer strong {
+  display: block;
+  color: var(--box-ink);
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+#resume .experience-footer p {
+  margin: 8px 0 0;
+  color: var(--box-ink);
+  font-weight: 700;
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(9deg);
+  }
+}
+
+@keyframes softPop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+#about .about-remix-wordmark span,
+#skills .skill-card,
+#facts .fact-card,
+.contact-big-link {
+  animation: softPop 6s ease-in-out infinite;
+}
+
+#about .about-remix-wordmark span:nth-child(2),
+#skills .skill-card:nth-child(3),
+#facts .fact-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+#about .about-remix-wordmark span:nth-child(3),
+#skills .skill-card:nth-child(4),
+#facts .fact-card:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #resume .experience-lede::after,
+  #about .about-remix-wordmark span,
+  #skills .skill-card,
+  #facts .fact-card,
+  .contact-big-link {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #resume .experience-cards,
+  #resume .experience-footer {
+    grid-template-columns: 1fr;
+  }
+
+  #resume .experience-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  #resume .experience-lede,
+  #resume .experience-card,
+  #resume .experience-footer div {
+    padding: 20px;
+  }
+
+  #resume .experience-card-top {
+    flex-direction: column;
+  }
+
+  #resume .experience-card-top strong {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
 /*--------------------------------------------------------------
 # Expertise Tile Simplification
 --------------------------------------------------------------*/
