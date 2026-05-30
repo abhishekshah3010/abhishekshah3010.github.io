@@ -88,11 +88,6 @@
               >
             </li>
             <li>
-              <a href="#facts" class="nav-link scrollto"
-                ><i class="bi-keyboard"></i> <span>Expertise</span></a
-              >
-            </li>
-            <li>
               <a href="#resume" class="nav-link scrollto"
                 ><i class="bx bx-file-blank"></i> <span>Experience</span></a
               >
@@ -100,6 +95,11 @@
             <li>
               <a href="#skills" class="nav-link scrollto"
                 ><i class="bi-bar-chart"></i> <span>Skills</span></a
+              >
+            </li>
+            <li>
+              <a href="#facts" class="nav-link scrollto"
+                ><i class="bi-keyboard"></i> <span>Expertise</span></a
               >
             </li>
             <li>
@@ -127,7 +127,10 @@
           <div class="hero-badge">portfolio</div>
           <div class="hero-copy">
             <p class="hero-prompt">Software Engineer</p>
-            <h1>Abhishek Shah</h1>
+            <h1 class="hero-name-fancy">
+              <span>Abhishek</span>
+              <span>Shah</span>
+            </h1>
             <p class="hero-tagline">
               I build backend systems, data workflows, and AI-powered products
               that scale cleanly and feel sharp.
@@ -196,58 +199,44 @@
         <div class="container">
           <div class="section-title">
             <h2>About</h2>
-            <p>
-              A systems engineer who blends backend precision with product
-              energy, building systems that feel fast, clear, and human.
-            </p>
           </div>
 
           <div class="about-grid">
-            <div class="about-card" data-aos="fade-up">
-              <div class="about-card-header">system summary</div>
+            <div class="about-card about-card--remix" data-aos="fade-up">
+              <div class="about-card-header">systems remix</div>
               <div class="about-card-body">
+                <div class="about-remix-wordmark">
+                  <span>Data</span>
+                  <span>Trust</span>
+                  <span>Speed</span>
+                </div>
                 <p>
-                  I am a <strong>Software Engineer</strong> working at the
-                  intersection of
-                  <strong>finance, data, and backend infrastructure</strong>. At
-                  <strong>Goldman Sachs</strong>, I build and enhance
-                  large-scale reporting and subledger platforms that support
-                  critical financial workflows across teams.
+                  I turn messy backend problems into systems teams can trust.
                 </p>
-                <p>
-                  I work across
-                  <strong>Java, Python, SQL, and cloud technologies</strong> and
-                  enjoy solving problems involving
-                  <strong
-                    >scale, data integrity, and operational reliability</strong
-                  >.
-                </p>
-                <p>
-                  I value <strong>clean architecture</strong>,
-                  <strong>strong ownership</strong>, and
-                  <strong>cross-functional collaboration</strong>, and I’m
-                  motivated by building systems engineers and businesses can
-                  trust.
-                </p>
+                <div class="about-remix-tags" aria-label="Engineering focus">
+                  <span>Backend</span>
+                  <span>Automation</span>
+                  <span>Reliability</span>
+                </div>
               </div>
             </div>
 
-            <div class="about-panel" data-aos="fade-up" data-aos-delay="100">
-              <div class="about-panel-item">
-                <span class="label">Primary Stack</span>
+            <div class="about-panel about-impact-stack" data-aos="fade-up" data-aos-delay="100">
+              <div class="about-panel-item about-impact-card">
+                <span class="label">Now</span>
+                <strong>Goldman Sachs reporting and subledger platforms</strong>
+              </div>
+              <div class="about-panel-item about-impact-card">
+                <span class="label">Builds</span>
                 <strong>Java, Python, SQL, AWS, Docker, Kubernetes</strong>
               </div>
-              <div class="about-panel-item">
-                <span class="label">Work style</span>
-                <strong>Data-first, reliability-focused, product-aware</strong>
+              <div class="about-panel-item about-impact-card">
+                <span class="label">Wins</span>
+                <strong>Cleaner workflows, trusted data, steadier releases</strong>
               </div>
-              <div class="about-panel-item">
-                <span class="label">Signature</span>
-                <strong>Scalable systems with crisp user trust</strong>
-              </div>
-              <div class="about-panel-item">
-                <span class="label">Mode</span>
-                <strong>Build, optimize, ship, repeat</strong>
+              <div class="about-panel-item about-impact-card">
+                <span class="label">Style</span>
+                <strong>Own the system, simplify the path, move fast</strong>
               </div>
             </div>
           </div>
@@ -255,46 +244,11 @@
       </section>
       <!-- End About Section -->
 
-      <section id="facts" class="facts section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Expertise</h2>
-            <p>
-              Backend, data, and reliability strengths I bring into production
-              systems.
-            </p>
-          </div>
-
-          <div class="fact-grid">
-            <div class="fact-card" data-aos="fade-up">
-              <div class="fact-icon"><i class="bi-keyboard"></i></div>
-              <h3>Backend Systems</h3>
-            </div>
-            <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="fact-icon"><i class="bi-bar-chart"></i></div>
-              <h3>Data Platforms</h3>
-            </div>
-            <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="fact-icon"><i class="bi-terminal"></i></div>
-              <h3>Distributed Systems</h3>
-            </div>
-            <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="fact-icon"><i class="bi-infinity"></i></div>
-              <h3>Reliability</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ======= Resume Section ======= -->
       <section id="resume" class="resume resume--refresh">
         <div class="container">
           <div class="section-title">
             <h2>Experience</h2>
-            <p>
-              A bold new view of the systems, leadership, and outcomes that
-              define your work.
-            </p>
           </div>
 
           <div class="career-hero" data-aos="fade-up">
@@ -330,14 +284,6 @@
 
           <div class="career-layout">
             <div class="career-column career-column--story" data-aos="fade-up">
-              <div class="career-card career-card--accent">
-                <h3>Impact narratives</h3>
-                <p>
-                  Projects that moved the needle in production reliability,
-                  throughput, and engineering velocity.
-                </p>
-              </div>
-
               <div class="career-timeline">
                 <div class="timeline-item">
                   <div class="timeline-badge">Goldman Sachs</div>
@@ -406,24 +352,6 @@
               data-aos="fade-up"
               data-aos-delay="150"
             >
-              <div class="career-card">
-                <h3>How I work</h3>
-                <p>
-                  Reliable systems are built through collaboration, disciplined
-                  execution, and a product-aware engineering mindset.
-                </p>
-              </div>
-
-              <div class="career-card career-card--skillset">
-                <h4>Core strengths</h4>
-                <ul>
-                  <li>System design for high-throughput reporting</li>
-                  <li>Production monitoring &amp; incident resilience</li>
-                  <li>Automation, CI/CD, and release flow</li>
-                  <li>Backend services with Java, Python, SQL</li>
-                </ul>
-              </div>
-
               <div class="career-card career-card--education">
                 <h4>Education</h4>
                 <p>
@@ -445,7 +373,6 @@
         <div class="container">
           <div class="section-title">
             <h2>Skills</h2>
-            <p>Capabilities and comfort zones, shown as vibrant status bars.</p>
           </div>
 
           <div class="skills-grid skills-board">
@@ -506,6 +433,33 @@
         </div>
       </section>
       <!-- End Skills Section -->
+
+      <section id="facts" class="facts section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Expertise</h2>
+          </div>
+
+          <div class="fact-grid">
+            <div class="fact-card" data-aos="fade-up">
+              <div class="fact-icon"><i class="bi-keyboard"></i></div>
+              <h3>Backend Systems</h3>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="fact-icon"><i class="bi-bar-chart"></i></div>
+              <h3>Data Platforms</h3>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="fact-icon"><i class="bi-terminal"></i></div>
+              <h3>Distributed Systems</h3>
+            </div>
+            <div class="fact-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="fact-icon"><i class="bi-infinity"></i></div>
+              <h3>Reliability</h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ======= Projects Section ======= -->
       <!--
