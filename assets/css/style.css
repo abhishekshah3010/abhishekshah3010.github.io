@@ -5510,15 +5510,15 @@ section::before {
 # Punchy Box System Restore
 --------------------------------------------------------------*/
 :root {
-  --box-ink: #101014;
-  --box-paper: #fff6e6;
+  --box-ink: #1c1428;
+  --box-paper: #fff9f2;
   --box-panel: #ffffff;
-  --box-blue: #3152ff;
-  --box-orange: #ff6b2c;
-  --box-lime: #caff42;
-  --box-sky: #7fe8ff;
-  --box-pink: #ff5cb8;
-  --box-line: #101014;
+  --box-blue: #305cff;
+  --box-orange: #ff6b4a;
+  --box-lime: #ffd84d;
+  --box-sky: #9bdcff;
+  --box-pink: #c65cff;
+  --box-line: #1c1428;
   --box-shadow: 8px 8px 0 var(--box-ink);
 }
 
@@ -8533,6 +8533,256 @@ section {
     max-width: 100%;
     text-align: left;
   }
+}
+
+/* Global Palette Refresh */
+body,
+body.mode-neon,
+body.mode-dark,
+body.mode-light {
+  background: #fff9f2 !important;
+  color: var(--box-ink);
+}
+
+#header {
+  background:
+    linear-gradient(180deg, #1c1428 0%, #2a2038 54%, #1c1428 100%) !important;
+}
+
+#header .profile .social-links a,
+.mobile-nav-toggle {
+  background: #ffd84d !important;
+  color: var(--box-ink) !important;
+  border: 2px solid var(--box-ink);
+}
+
+#header .profile .social-links a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  background: #ff6b4a !important;
+  color: #ffffff !important;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  color: #fff9f2 !important;
+}
+
+#hero,
+#about,
+#resume,
+#skills,
+#facts,
+#blog,
+#contact {
+  background-color: #fff9f2 !important;
+}
+
+#hero {
+  background:
+    linear-gradient(135deg, rgba(255, 216, 77, 0.36) 0 22%, transparent 22%),
+    linear-gradient(315deg, rgba(198, 92, 255, 0.24) 0 24%, transparent 24%),
+    repeating-linear-gradient(90deg, transparent 0 36px, rgba(28, 20, 40, 0.045) 36px 38px),
+    #fff9f2 !important;
+}
+
+.hero-panel,
+.hero-hud,
+.about-card,
+.about-panel,
+.about-panel-item,
+.experience-lede,
+.experience-card,
+.experience-footer div,
+.skill-card,
+.fact-card,
+.contact-card,
+.map-card,
+.blog-card {
+  border-color: var(--box-ink) !important;
+}
+
+#hero .hero-copy h1.hero-name-fancy span:first-child,
+#about .about-remix-wordmark span:nth-child(2),
+#skills .skills-board .skill-card:nth-child(2),
+#resume .experience-card--current,
+#resume .experience-footer div:nth-child(2),
+#facts .fact-card:nth-child(2),
+.contact-board div:nth-child(2) {
+  background: #dff8ff !important;
+}
+
+#hero .hero-copy h1.hero-name-fancy span:last-child,
+#about .about-remix-wordmark span:nth-child(3),
+#skills .skills-board .skill-card:nth-child(3),
+#resume .experience-footer div,
+#facts .fact-card:nth-child(3),
+.contact-board div:nth-child(3) {
+  background: #fff0b8 !important;
+}
+
+#hero .hero-copy h1.hero-name-fancy::before,
+#about .about-card--remix .about-card-header,
+#resume .experience-lede::after,
+#resume .experience-card-top span,
+#skills .skills-board .skill-card:nth-child(4),
+.contact-card .contact-card-top,
+.cmd-button.accent {
+  background: #ff6b4a !important;
+  color: #ffffff !important;
+}
+
+#about .about-impact-card:nth-child(1),
+#skills .skills-board .skill-card:nth-child(5),
+#facts .fact-card:nth-child(4),
+#resume .experience-pills span:nth-child(3) {
+  background: #efdcff !important;
+}
+
+#about .about-impact-card:nth-child(2),
+#skills .skill-chip-grid span,
+#resume .experience-pills span,
+.contact-big-link {
+  background: #dff8ff !important;
+}
+
+#about .about-impact-card:nth-child(3),
+#resume .experience-pills span:nth-child(2),
+#resume .experience-card:nth-child(2),
+.cmd-button {
+  background: #ffffff !important;
+}
+
+#about .about-impact-card:nth-child(4),
+#resume .experience-card:nth-child(3),
+.contact-signal {
+  background: #efdcff !important;
+}
+
+#skills .skills-board .skill-card.skill-feature {
+  background-color: #1c1428 !important;
+  background-image: linear-gradient(135deg, #1c1428 0 48%, #305cff 48% 72%, #c65cff 72%) !important;
+}
+
+#skills .skills-board .skill-card.skill-feature,
+#skills .skills-board .skill-card.skill-feature h4,
+#skills .skills-board .skill-card.skill-feature p {
+  color: #ffffff !important;
+}
+
+.section-title h2 {
+  background: #1c1428 !important;
+  color: #ffffff !important;
+  border-color: var(--box-ink) !important;
+}
+
+.section-title h2::before {
+  background: #ffd84d !important;
+}
+
+.hero-badge,
+.hero-prompt,
+.skill-kicker,
+#resume .experience-lede > span,
+#about .about-card-header {
+  background: #ffd84d !important;
+  color: var(--box-ink) !important;
+}
+
+a,
+.contact-info a {
+  color: #305cff;
+}
+
+a:hover,
+.contact-info a:hover {
+  color: #c65cff;
+}
+
+.back-to-top {
+  background: #ff6b4a !important;
+  border: 3px solid var(--box-ink);
+  box-shadow: 4px 4px 0 var(--box-ink);
+}
+
+/* Sidebar Tile Contrast Fix */
+#header .nav-menu a,
+#header .nav-menu a:focus {
+  background: #ffffff !important;
+  color: var(--box-ink) !important;
+  border-color: var(--box-ink) !important;
+}
+
+#header .nav-menu a span,
+#header .nav-menu a:focus span {
+  color: var(--box-ink) !important;
+  opacity: 1 !important;
+}
+
+#header .nav-menu a i,
+#header .nav-menu a:focus i {
+  color: var(--box-ink) !important;
+  background: #ffd84d !important;
+  border-color: var(--box-ink) !important;
+}
+
+#header .nav-menu li:nth-child(2n) a i {
+  background: #9bdcff !important;
+}
+
+#header .nav-menu li:nth-child(3n) a i {
+  background: #c65cff !important;
+  color: #ffffff !important;
+}
+
+#header .nav-menu a:hover,
+#header .nav-menu .active,
+#header .nav-menu .active:focus,
+#header .nav-menu li:hover > a {
+  background: #ff6b4a !important;
+  color: #ffffff !important;
+}
+
+#header .nav-menu a:hover span,
+#header .nav-menu .active span,
+#header .nav-menu .active:focus span,
+#header .nav-menu li:hover > a span {
+  color: #ffffff !important;
+}
+
+#header .nav-menu a:hover i,
+#header .nav-menu .active i,
+#header .nav-menu .active:focus i,
+#header .nav-menu li:hover > a i {
+  background: #ffffff !important;
+  color: var(--box-ink) !important;
+}
+
+/* Experience Company Color Swap */
+#resume .experience-card--current {
+  background: #efdcff !important;
+}
+
+#resume .experience-card:nth-child(3) {
+  background: #dff8ff !important;
+}
+
+/* Calm Core Stack Feature Card */
+#skills .skills-board .skill-card.skill-feature {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(135deg, rgba(255, 216, 77, 0.24) 0 34%, transparent 34%) !important;
+  color: var(--box-ink) !important;
+}
+
+#skills .skills-board .skill-card.skill-feature h4,
+#skills .skills-board .skill-card.skill-feature p {
+  color: var(--box-ink) !important;
+}
+
+#skills .skills-board .skill-card.skill-feature .skill-kicker {
+  background: #ffd84d !important;
+  color: var(--box-ink) !important;
 }
 
 /*--------------------------------------------------------------
