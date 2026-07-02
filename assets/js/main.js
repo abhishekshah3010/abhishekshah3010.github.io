@@ -15,7 +15,7 @@
     if (prefersReducedMotion) {
       finishIntro();
     } else {
-      window.addEventListener("load", () => setTimeout(finishIntro, 1350), { once: true });
+      window.addEventListener("load", () => setTimeout(finishIntro, 3650), { once: true });
     }
   }
 
@@ -81,7 +81,7 @@
       const key = button.dataset.skillTab;
       skillButtons.forEach((item) => item.classList.toggle("active", item === button));
       skillPanels.forEach((panel) => {
-        panel.classList.toggle("active", panel.dataset.skillPanel === key);
+        panel.classList.toggle("active", panel.datasetSkillPanel === key);
       });
     });
   });
