@@ -562,6 +562,14 @@ p {
   margin-bottom: 8px;
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+  transition: text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hero-metrics strong.is-counting,
+.brief-metrics b.is-counting {
+  text-shadow: 0 12px 34px rgba(41, 72, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .hero-metrics span {
@@ -731,6 +739,8 @@ p {
 .brief-metrics b {
   font-size: clamp(2rem, 4vw, 4.2rem);
   line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+  transition: text-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .brief-metrics small {
