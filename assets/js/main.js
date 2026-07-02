@@ -81,7 +81,7 @@
       const key = button.dataset.skillTab;
       skillButtons.forEach((item) => item.classList.toggle("active", item === button));
       skillPanels.forEach((panel) => {
-        panel.classList.toggle("active", panel.datasetSkillPanel === key);
+        panel.classList.toggle("active", panel.dataset.skillPanel === key);
       });
     });
   });
