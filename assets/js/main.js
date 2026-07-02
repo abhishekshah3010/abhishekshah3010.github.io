@@ -131,6 +131,57 @@
     revealTargets.forEach((target) => revealObserver.observe(target));
   }
 
+  const metricValues = $$("[data-count]");
+
+  const setMetricText = (metric, value) => {
+    const suffix = metric.dataset.suffix || "";
+    metric.textContent = `${value}${suffix}`;
+  };
+
+  const animateMetric = (metric) => {
+    const target = Number(metric.dataset.count || 0);
+    const duration = 950;
+    const start = performance.now();
+
+    metric.classList.add("is-counting");
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+      setMetricText(metric, value);
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        setMetricText(metric, target);
+        window.setTimeout(() => metric.classList.remove("is-counting"), 180);
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  if (metricValues.length) {
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      metricValues.forEach((metric) => setMetricText(metric, Number(metric.dataset.count || 0)));
+    } else {
+      metricValues.forEach((metric) => setMetricText(metric, 0));
+      const metricObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            animateMetric(entry.target);
+            metricObserver.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.45 }
+      );
+
+      metricValues.forEach((metric) => metricObserver.observe(metric));
+    }
+  }
+
   window.addEventListener("load", () => {
     if (window.location.hash) {
       setTimeout(() => scrollToTarget(window.location.hash), 80);
