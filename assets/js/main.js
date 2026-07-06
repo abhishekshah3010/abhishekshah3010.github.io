@@ -8,6 +8,8 @@
   const navToggle = $(".nav-toggle");
   const navLinks = $$("#navbar a");
   const backToTop = $(".back-to-top");
+  const resumeModal = $("#resume-modal");
+  const resumeCloseButton = resumeModal ? $(".resume-close", resumeModal) : null;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const finishIntro = () => body.classList.add("intro-complete");
@@ -15,7 +17,7 @@
     if (prefersReducedMotion) {
       finishIntro();
     } else {
-      window.addEventListener("load", () => setTimeout(finishIntro, 3650), { once: true });
+      window.addEventListener("load", () => setTimeout(finishIntro, 2000), { once: true });
     }
   }
 
@@ -71,6 +73,38 @@
 
   window.addEventListener("scroll", () => {
     backToTop?.classList.toggle("active", window.scrollY > 600);
+  });
+
+  const openResumeModal = () => {
+    if (!resumeModal) return;
+    resumeModal.classList.add("is-open");
+    resumeModal.setAttribute("aria-hidden", "false");
+    body.classList.add("resume-open");
+    resumeCloseButton?.focus();
+  };
+
+  const closeResumeModal = () => {
+    if (!resumeModal) return;
+    resumeModal.classList.remove("is-open");
+    resumeModal.setAttribute("aria-hidden", "true");
+    body.classList.remove("resume-open");
+  };
+
+  $$("[data-resume-modal]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      openResumeModal();
+    });
+  });
+
+  $$("[data-resume-close]").forEach((control) => {
+    control.addEventListener("click", closeResumeModal);
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && resumeModal?.classList.contains("is-open")) {
+      closeResumeModal();
+    }
   });
 
   const skillButtons = $$("[data-skill-tab]");
